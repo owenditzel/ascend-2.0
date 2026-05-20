@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 0%;
+    --foreground: 30 17% 93%;
+    --card: 0 0% 7%;
+    --card-foreground: 30 17% 93%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 30 17% 93%;
+    --primary: 9 58% 49%;
+    --primary-foreground: 30 17% 93%;
+    --secondary: 0 0% 17%;
+    --secondary-foreground: 30 17% 93%;
+    --muted: 0 0% 13%;
+    --muted-foreground: 0 0% 70%;
+    --accent: 9 58% 49%;
+    --accent-foreground: 30 17% 93%;
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 30 17% 93%;
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 9 58% 49%;
+    --radius: 0.5rem;
+  }
+
+  * {
+    border-color: hsl(var(--border));
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+    scrollbar-width: thin;
+    scrollbar-color: #333 #111;
+  }
+
+  body {
+    background-color: #000000;
+    color: #F5F1ED;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    animation: fadeIn 0.3s ease-out;
+  }
+
+  #root {
+    min-height: 100vh;
+    width: 100%;
+  }
+
+  ::selection {
+    background-color: #C64E3A;
+    color: #F5F1ED;
+  }
+
+  :focus-visible {
+    outline: 2px solid #C64E3A;
+    outline-offset: 2px;
+  }
+
+  input, select, textarea {
+    font-size: 16px;
+  }
+
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #111; }
+  ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+  ::-webkit-scrollbar-thumb:hover { background: #C64E3A; }
+}
