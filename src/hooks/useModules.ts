@@ -2,7 +2,8 @@ import { MODULES } from '@/data/curriculum'
 import type { Module } from '@/types'
 
 export function useModules() {
-  return { modules: MODULES, loading: false }
+  const sorted = [...MODULES].sort((a, b) => a.order - b.order)
+  return { modules: sorted, loading: false }
 }
 
 export function useModule(id: number) {
