@@ -65,6 +65,7 @@ export interface Resource {
   category: string
   module_id?: number
   download_count: number
+  tier_availability: 'both' | 'community_only' | 'full_only'
   created_at: string
   updated_at: string
 }
