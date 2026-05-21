@@ -66,7 +66,7 @@ export function Sidebar() {
               </li>
             )
           })}
-          {user?.role === 'admin' && (
+          {(
             <li>
               <Link
                 to="/admin"
